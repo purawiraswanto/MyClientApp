@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Edit Employee Page"
+             x:Class="MyClientApp.EditEmployeePage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="110" />
+                <ColumnDefinition Width="200*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="EDIT EMPLOYEE" FontSize="Medium" FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" Grid.ColumnSpan="3" />
+            <Label Text="Employee ID :" HorizontalTextAlignment="End" 
+                   VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="1" />
+            <Entry x:Name="entryID" Text="{Binding EmpId}" IsReadOnly="True"
+                   Grid.Column="1" Grid.Row="1" VerticalTextAlignment="Center" />
+            <Label Text="Employee Name :" HorizontalTextAlignment="End" 
+                   VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="2" />
+            <Entry x:Name="entryName" Text="{Binding EmpName}"
+                   Grid.Column="1" Grid.Row="2" VerticalTextAlignment="Center" />
+            <Label Text="Designation :" HorizontalTextAlignment="End" 
+                   VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="3" />
+            <Entry x:Name="entryDesignation" Text="{Binding Designation}"
+                   Grid.Column="1" Grid.Row="3" VerticalTextAlignment="Center" />
+            <Label Text="Department :" HorizontalTextAlignment="End" 
+                   VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="4" />
+            <Entry x:Name="entryDepartment" Text="{Binding Department}"
+                   Grid.Column="1" Grid.Row="4" VerticalTextAlignment="Center" />
+            <Label Text="Qualification :" HorizontalTextAlignment="End" 
+                   VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="5" />
+            <Entry x:Name="entryQualification" Text="{Binding Qualification}"
+                   Grid.Column="1" Grid.Row="5" VerticalTextAlignment="Center" />
+            <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="6"
+                         Grid.ColumnSpan="3">
+                <Button x:Name="btnSave" Text="Edit" Clicked="btnSave_Clicked" />
+                <Button x:Name="btnDelete" Text="Delete" Clicked="btnDelete_Clicked" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
